@@ -46,7 +46,7 @@ struct Test* deleteNode(struct Test* head, int data)
 			struct Test* tmp= (struct Test*)malloc(sizeof(struct Test* ));
 
 			point->next = point->next->next;
-			free(tmp);
+			free(tmp);//释放被删除的节点指向的内存
 			printf("找到了data，删除成功\n");
 			return head;
 		}
